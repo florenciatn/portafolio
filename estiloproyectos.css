@@ -9,7 +9,6 @@ a {
     color:black
 }
 
-p a:hover {
-    color: #f33501;
-    background-color: #fad0ed ;
+h1 a:hover {
+    color: #fcd0ef;
 }
