@@ -1,13 +1,20 @@
 body {
-    background-color: rgba(253, 246, 233, 0.899);
-    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.899);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 a {
     text-decoration: none;
+    color:black
 }
 
-h4 a:hover {
-    color: #f30101;
+p a:hover {
+    color: #f33501;
+    background-color: #fad0ed ;
+}
+
+h1 a:hover {
+color:#fad0ed
 
 }
