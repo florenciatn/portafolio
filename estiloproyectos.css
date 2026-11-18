@@ -22,8 +22,14 @@ h2 {
     margin-right: 30px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 @media (max-width: 700px) {
-    body {
+    article:first-of-type {
         flex-wrap: wrap;
         gap: 0 16px;
     }
