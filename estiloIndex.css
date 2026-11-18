@@ -19,13 +19,13 @@ a {
     color:rgb(187, 189, 189)
 }
 
-h2 {
+h3 {
     margin-right: 30px;
     color:rgb(187, 189, 189)
 }
 
 
-h2 a:hover {
+h3 a:hover {
     color:rgb(224, 222, 222)
 }
 
@@ -54,7 +54,7 @@ p {
             gap: 0 16px;
         }
     
-        h2 {
+        h3 {
             font-size: 16px;
             margin-right: 0;
         }
