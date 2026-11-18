@@ -25,3 +25,9 @@ h2 {
     display: inline-block;
     margin-right: 30px;
 }
+
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+}
