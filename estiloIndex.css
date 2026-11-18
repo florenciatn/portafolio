@@ -2,25 +2,42 @@ body {
     background-color: rgba(255, 255, 255, 0.899);
     font-size: 15px;
     font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 16px;
 }
     
 img {
-        max-width: 100%;   
-        height: auto;      
-        display: block;   
-        padding: 8px 16px 24px 32px;  
-      }
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
 
 a {
     text-decoration: none;
     color:black
 }
 
-h1 a:hover {
+h2 {
+    margin-right: 30px;
+}
+
+h2 a:hover {
     color:darkgrey
 }
 
 p a:hover {
     background-color:darkgrey
+}
+
+article:first-of-type {
+    display: flex;
+    gap: 40px;
+    grid-column: 1 / -1;
+}
+
+p {
+    grid-column: 1 / -1;
 }
 

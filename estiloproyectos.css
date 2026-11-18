@@ -9,6 +9,15 @@ a {
     color:black
 }
 
-h1 a:hover {
+h2 a:hover {
     color:darkgray
+}
+
+article:first-of-type {
+    display: flex;
+    gap: 40px;
+}
+
+h2 {
+    margin-right: 30px;
 }
