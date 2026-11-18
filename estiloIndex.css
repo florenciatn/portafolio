@@ -16,17 +16,17 @@ img {
 
 a {
     text-decoration: none;
-    color:rgb(109, 110, 110)
+    color:rgb(187, 189, 189)
 }
 
 h2 {
     margin-right: 30px;
-    color:rgb(109, 110, 110)
-    }
+    color:rgb(187, 189, 189)
+}
 
 
 h2 a:hover {
-    color:darkgrey
+    color:rgb(224, 222, 222)
 }
 
 p a:hover {
