@@ -25,7 +25,3 @@ h2 {
     display: inline-block;
     margin-right: 30px;
 }
-
-h2:last-child {
-    margin-left: auto;
-}
