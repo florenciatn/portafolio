@@ -26,3 +26,12 @@ h2 {
     margin-right: 30px;
 }
 
+@media (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    article:first-of-type {
+        flex-wrap: wrap;
+        gap: 0 16px;
+    }
