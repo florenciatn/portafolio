@@ -26,4 +26,14 @@ h2 {
     body {
         grid-template-columns: 1fr;
     }
+
+    article:first-of-type {
+        flex-wrap: wrap;
+        gap: 0 16px;
+    }
+
+    h2 {
+        font-size: 16px;
+        margin-right: 0;
+    }
 }
