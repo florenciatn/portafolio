@@ -24,7 +24,6 @@ h3 {
     margin: 16px 30px 16px 0;
     padding: 4px 10px;
     color: white;
-    font-weight: bold;
 }
 
 article:first-of-type {
@@ -32,21 +31,15 @@ article:first-of-type {
     gap: 40px;
 }
 
-article:first-of-type h3 {
-    font-size: 16px;
-    margin: 16px 30px 16px 0;
-    padding: 4px 10px;
-    font-weight: bold;
-}
-
-@media (max-width: 700px) {
-    body {
-        flex-wrap: wrap;
-        gap: 0 16px;
+    @media (max-width: 700px) {
+        body {
+            flex-wrap: wrap;
+            gap: 0 12px;
+        }
+    
+        h3 {
+            margin-right: 0;
+            padding: 4px 0;
+            font-size: 14px;
+        }
     }
-
-    h3 {
-        font-size: 16px;
-        margin-right: 0;
-    }
-}

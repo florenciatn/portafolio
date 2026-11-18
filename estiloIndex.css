@@ -19,11 +19,21 @@ a {
     color:rgb(187, 189, 189)
 }
 
+article:first-of-type {
+    display: flex;
+    gap: 40px;
+    grid-column: 1 / -1;
+}
+
 h3 {
+    margin: 16px 0;
     font-size: 16px;
+    color: dimgrey;
+}
+
+article:first-of-type h3 {
     margin: 16px 30px 16px 0;
     padding: 4px 10px;
-    color:dimgrey
 }
 
 
@@ -33,24 +43,6 @@ h3 a:hover {
 
 p a:hover {
     background-color:darkgrey
-}
-
-article:first-of-type {
-    display: flex;
-    gap: 40px;
-    grid-column: 1 / -1;
-}
-
-article:first-of-type {
-    display: flex;
-    gap: 40px;
-}
-
-article:first-of-type h3 {
-    font-size: 16px;
-    margin: 16px 30px 16px 0;
-    padding: 4px 10px;
-    font-weight: bold;
 }
 
 p {
@@ -65,11 +57,12 @@ p {
     
         article:first-of-type {
             flex-wrap: wrap;
-            gap: 0 16px;
+            gap: 0 12px;
         }
     
-        h3 {
-            font-size: 16px;
+        article:first-of-type h3 {
             margin-right: 0;
+            padding: 4px 0;
+            font-size: 14px;
         }
     }
