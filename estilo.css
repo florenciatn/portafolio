@@ -75,13 +75,15 @@ body.bio {
 
 /* ===== BIO ===== */
 .bio p {
-    grid-column: 1;
+    grid-column: 3;
     text-align: justify;
     text-indent: 2em;
+    margin: 40px 24px 0 0;
 }
 
 .bio p:last-of-type {
     text-indent: 0;
+    text-align: right;
 }
 
 .bio p a:hover {
@@ -122,6 +124,11 @@ body.bio {
 
     .bio p {
         grid-column: 1 / -1;
+            margin-top: 16px;
+    }
+
+    .bio p:last-of-type {
+        text-align: left;
     }
 
     .proyecto article:nth-of-type(2) {
@@ -138,4 +145,30 @@ body.bio {
         padding: 4px 0;
         font-size: 14px;
     }
+}
+
+body {
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    width: 100px;
+    height: 100px;
+    background-color: #ccc;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+
+    filter: blur(5px);
+    transform: scale(1.05); /* evita bordes claros al desenfocar */
+    transition: filter 0.4s ease;
+}
+
+body:hover::before {
+    filter: blur(0);
 }
