@@ -30,13 +30,27 @@ article:first-of-type h3 {
 }
 
 /* ===== METAINDEX ===== */
+/* html con fondo propio: así la foto la pinta el body y Safari la puede desenfocar */
+html:has(body.meta) {
+    background-color: white;
+}
+
 body.meta {
-    display: flex;
-    gap: 40px;
+    margin: 0;
+    min-height: 100dvh;
     background-image: url("img/plantitas.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
+    background-position: center;
+}
+
+/* la barra: desenfoca la foto que tiene detrás */
+.meta nav {
+    display: flex;
+    gap: 40px;
+    padding: 0 20px;
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
 }
 
 .meta a {
@@ -135,7 +149,7 @@ body.bio {
         grid-template-columns: 1fr;
     }
 
-    body.meta {
+    .meta nav {
         flex-wrap: wrap;
         gap: 0 12px;
     }
@@ -146,6 +160,7 @@ body.bio {
         font-size: 14px;
     }
 }
+<<<<<<< HEAD
 
 body::before {
     content: "";
@@ -161,3 +176,5 @@ body::before {
 body:hover::before {
     filter: blur(0);
 }
+=======
+>>>>>>> a009425e90dab643e1ce2002b595c03ea47e7068
