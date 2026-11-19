@@ -42,11 +42,8 @@ body.meta {
 .meta nav {
     display: flex;
     gap: 40px;
-<<<<<<< HEAD
     padding: 8px; 
-=======
-    padding: 0 20px;
->>>>>>> 1c4e3e253d1b48c0f11e206f701f5c569a1fe828
+
 }
 
 .meta a {
@@ -69,14 +66,14 @@ body.meta {
    - Quitarlo: selecciona desde "html:has" hasta la llave } del nav
      y pulsa Cmd + / para comentarlo. Otra vez Cmd + / lo vuelve a poner.
    - Lo de html es para que en Safari también desenfoque. */
-html:has(body.meta) {
+/* html:has(body.meta) {
     background-color: white;
 }
 
 .meta nav {
     -webkit-backdrop-filter: blur(12px);
     backdrop-filter: blur(12px);
-}
+} */
 
 /* ===== INDEX Y BIO (cuadrícula de 3 columnas) ===== */
 body.index,
@@ -189,6 +186,27 @@ body:hover::before {
     filter: blur(0);
 } */
 
-nav {
+/* ===== MENÚ FIJO, IGUAL EN TODAS LAS PÁGINAS ===== */
+nav,
+article:first-of-type {
     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    box-sizing: border-box;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding: 8px;
+}
+
+body:not(.meta) article:first-of-type {
+    background-color: rgba(255, 255, 255, 0.899);
+}
+
+body.index,
+body.bio,
+body.proyecto {
+    padding-top: 70px;
 }
