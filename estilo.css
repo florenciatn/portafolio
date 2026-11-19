@@ -44,13 +44,10 @@ body.meta {
     background-position: center;
 }
 
-/* la barra: desenfoca la foto que tiene detrás */
 .meta nav {
     display: flex;
     gap: 40px;
-    padding: 0 20px;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+    padding: 8px; 
 }
 
 .meta a {
@@ -175,3 +172,7 @@ body::before {
 body:hover::before {
     filter: blur(0);
 } */
+
+nav {
+    position: fixed;
+}
