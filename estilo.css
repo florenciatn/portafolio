@@ -30,11 +30,6 @@ article:first-of-type h3 {
 }
 
 /* ===== METAINDEX ===== */
-/* html con fondo propio: así la foto la pinta el body y Safari la puede desenfocar */
-html:has(body.meta) {
-    background-color: white;
-}
-
 body.meta {
     margin: 0;
     min-height: 100dvh;
@@ -44,13 +39,10 @@ body.meta {
     background-position: center;
 }
 
-/* la barra: desenfoca la foto que tiene detrás */
 .meta nav {
     display: flex;
     gap: 40px;
     padding: 0 20px;
-    -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
 }
 
 .meta a {
@@ -65,6 +57,21 @@ body.meta {
 
 .meta h3 a:hover {
     color: rgb(248, 248, 131);
+}
+
+/* ===== BLUR DE LA BARRA DEL METAINDEX =====
+   Desenfoca la foto que queda detrás del menú.
+   - Más o menos blur: cambia los dos 12px (los dos iguales).
+   - Quitarlo: selecciona desde "html:has" hasta la llave } del nav
+     y pulsa Cmd + / para comentarlo. Otra vez Cmd + / lo vuelve a poner.
+   - Lo de html es para que en Safari también desenfoque. */
+html:has(body.meta) {
+    background-color: white;
+}
+
+.meta nav {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
 }
 
 /* ===== INDEX Y BIO (cuadrícula de 3 columnas) ===== */
@@ -160,7 +167,9 @@ body.bio {
         font-size: 14px;
     }
 }
-/* 
+
+/* ===== PRUEBA ANTIGUA DE BLUR (comentada, no se usa) ===== */
+/*
 body::before {
     content: "";
     position: fixed;
