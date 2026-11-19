@@ -1,0 +1,141 @@
+body {
+    background-color: rgba(255, 255, 255, 0.899);
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(187, 189, 189);
+}
+
+h3 {
+    margin: 16px 0;
+    font-size: 16px;
+    color: dimgrey;
+}
+
+h3 a:hover {
+    color: rgb(224, 222, 222);
+}
+
+article:first-of-type {
+    display: flex;
+    gap: 40px;
+}
+
+article:first-of-type h3 {
+    margin: 16px 30px 16px 0;
+    padding: 4px 10px;
+}
+
+/* ===== METAINDEX ===== */
+body.meta {
+    display: flex;
+    gap: 40px;
+    background-image: url("img/plantitas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.meta a {
+    color: white;
+}
+
+.meta h3 {
+    margin: 16px 30px 16px 0;
+    padding: 4px 10px;
+    color: white;
+}
+
+.meta h3 a:hover {
+    color: rgb(248, 248, 131);
+}
+
+/* ===== INDEX Y BIO (cuadrícula de 3 columnas) ===== */
+body.index,
+body.bio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.index article:first-of-type,
+.bio article:first-of-type {
+    grid-column: 1 / -1;
+}
+
+.index img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== BIO ===== */
+.bio p {
+    grid-column: 1;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.bio p:last-of-type {
+    text-indent: 0;
+}
+
+.bio p a:hover {
+    background-color: darkgrey;
+}
+
+/* ===== PÁGINAS DE PROYECTO ===== */
+.proyecto article:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.proyecto img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== MÓVIL (siempre al final) ===== */
+@media (max-width: 700px) {
+    article:first-of-type {
+        flex-wrap: wrap;
+        gap: 0 12px;
+    }
+
+    article:first-of-type h3 {
+        margin-right: 0;
+        padding: 4px 0;
+        font-size: 14px;
+    }
+
+    body.index,
+    body.bio {
+        grid-template-columns: 1fr;
+    }
+
+    .bio p {
+        grid-column: 1 / -1;
+    }
+
+    .proyecto article:nth-of-type(2) {
+        grid-template-columns: 1fr;
+    }
+
+    body.meta {
+        flex-wrap: wrap;
+        gap: 0 12px;
+    }
+
+    .meta h3 {
+        margin-right: 0;
+        padding: 4px 0;
+        font-size: 14px;
+    }
+}
