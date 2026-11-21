@@ -123,8 +123,8 @@ body.bio {
     height: 100%;
     width: auto;
     min-width: 0;
-    flex: 0 1 auto;
-    object-fit: contain;
+    flex: 1 1 0;
+    object-fit: cover;
     display: block;
 }
 
@@ -227,8 +227,11 @@ body:not(.meta) article:first-of-type {
     background-color: rgba(255, 255, 255, 0.899);
 }
 
-body.index,
 body.bio,
 body.proyecto {
     padding-top: 70px;
+}
+
+body.index {
+    padding-top: 120px;
 }
