@@ -1,7 +1,7 @@
 body {
     background-color: rgba(255, 255, 255, 0.899);
     font-size: 15px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif
 }
 
 a {
@@ -33,7 +33,7 @@ article:first-of-type h3 {
 body.meta {
     margin: 0;
     min-height: 100dvh;
-    background-image: url("img/plantitas.jpg");
+    background-image: url("img/plantitas.webp");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -117,11 +117,13 @@ body.bio {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
+    height: calc(100dvh - 200px);
 }
 
-.proyecto img {
+.proyecto article:nth-of-type(2) img {
     width: 100%;
-    aspect-ratio: 4 / 5;
+    height: 100%;
+    aspect-ratio: auto;
     object-fit: cover;
     display: block;
 }
